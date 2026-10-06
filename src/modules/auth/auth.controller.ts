@@ -4,6 +4,8 @@ import { AppError } from '../../lib/app-error';
 import { asyncHandler } from '../../lib/async-handler';
 import { refreshTokenSchema, requestOtpSchema, resendOtpSchema, verifyOtpSchema } from './auth.schema';
 import { currentUser, logout, refreshSession, requestOtp, resendOtp, verifyOtp } from './auth.service';
+import { profileSchema } from './profile.schema';
+import { saveProfile } from './profile.service';
 
 export const requestOtpController = asyncHandler(async (req: Request, res: Response) => {
   const body = requestOtpSchema.parse(req.body);
@@ -29,6 +31,12 @@ export const logoutController = asyncHandler(async (req: Request, res: Response)
   if (!req.user) throw new AppError(401, 'UNAUTHORIZED', 'Please log in again.');
   const body = refreshTokenSchema.parse(req.body);
   res.status(200).json(await logout(req.user.id, body.refreshToken));
+});
+
+export const profileController = asyncHandler(async (req: Request, res: Response) => {
+  if (!req.user) throw new AppError(401, 'UNAUTHORIZED', 'Please log in again.');
+  const body = profileSchema.parse(req.body);
+  res.status(200).json(await saveProfile(req.user.id, body));
 });
 
 export const meController = asyncHandler(async (req: Request, res: Response) => {

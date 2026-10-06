@@ -3,8 +3,8 @@
 > Agla phase shuru karne se pehle **sirf ye file** padho. Poora code dobara review mat karo.
 >
 > Last update: 6 Oct 2026
-> Current phase: **Phase 2 complete**
-> Next phase: **Phase 3 — Profile + Individual/MSME** — user ki permission ke bina start mat karo
+> Current phase: **Phase 3 complete**
+> Next phase: **Phase 4 — Loan Application** — user ki permission ke bina start mat karo
 
 ## Sources (source of truth)
 
@@ -46,7 +46,7 @@
 | 0 | Analysis | Done (ye file) |
 | 1 | Project setup + health | Done |
 | 2 | Authentication | Done |
-| 3 | Profile + Individual/MSME | Not started |
+| 3 | Profile + Individual/MSME | Done |
 | 4 | Loan application | Not started |
 | 5 | Documents + verification | Not started |
 | 6 | Consent + pre-eligibility | Not started |
@@ -342,10 +342,34 @@ Frontend connect:
 - App pehle se `POST /auth/otp/request` aur `POST /auth/otp/verify` call karti hai, aur `token` save karti hai.
 - `refreshToken` response me extra hai. Current app use nahi karti. Baad me app update karni hogi, warna 15 min baad token expire ho jayega.
 
-## Next session — Phase 3 start checklist
+## Phase 3 result — Profile + Individual/MSME
 
-1. Ye file padho. Phase 2 APIs upar hain. Postman collection `postman/FundenFlo.postman_collection.json`.
-2. User ne Phase 3 allow kiya ho tabhi profile + entity type.
-3. `PATCH /auth/profile` name, PAN, DOB. Mobile change nahi.
-4. Entity type loan file pe, user pe nahi.
-5. Collection me naye requests add karke ye file update karo. Phir STOP.
+Implemented:
+- `PATCH /api/v1/auth/profile` body `{ fullName, pan, dob }` → `{ fullName, pan, dob }`. Mobile change nahi hota.
+- `PUT /api/v1/borrower/entity-type` body `{ entityType: "msme" | "individual" }` → `{ id, entityType }`.
+- `GET /api/v1/borrower/entity-type` → same shape. Choice na ho to `404 ENTITY_NOT_SET`.
+- Nayi table `LoanFile`: sirf draft + entityType. Amount/category **nahi** (woh Phase 4).
+- Migration `20261006102341_profile_and_entity`.
+- Entity type **user pe nahi**, latest `draft` loan file pe. Dobara PUT same file update karta hai (MSME se Individual switch).
+- Postman folders: Profile, Borrower. Entity save `loanFileId` variable set karta hai.
+
+Validation (app ke messages):
+- Name 2–80, letters, PAN wala format. Extra spaces hat te hain.
+- PAN `ABCDE1234F`, lowercase accept karke uppercase save.
+- DOB `DD/MM/YYYY`, real date, future nahi, age 18–100.
+- Entity sirf `msme` ya `individual`. Proprietor/LLP/Pvt Ltd screen pe text hai, field nahi — save nahi kiya.
+
+Assumption: ek PAN ek hi account pe. Doosre user pe same PAN → `409 PAN_IN_USE`. Product doc me ye rule likha nahi tha; column pehle se unique tha.
+
+Test (pass): bina token 401, entity missing 404, msme create, individual same id, bad entity 400, short name / under 18 / 31 Feb 400, profile normalize, `/auth/me` me name+same mobile, duplicate PAN 409, apna PAN dubara 200. `tsc` + `eslint` pass.
+
+Frontend:
+- Profile app **pehle se** call karti hai jab `EXPO_PUBLIC_API_URL=http://LAN_IP:4000/api/v1` ho. Verify Details aur Profile screen dono `PATCH /auth/profile`.
+- Entity screen abhi sirf phone pe save karti hai, API call nahi karti. Connect karna ho to Continue pe `PUT /borrower/entity-type` with `{ entityType: "msme" }` ya `"individual"`, header `Authorization: Bearer <token>`.
+
+## Next session — Phase 4 start checklist
+
+1. Ye file padho. Loan file id Phase 3 draft hai. Amount abhi empty hai.
+2. User bole tabhi loan category, amount, tenure, location, purpose.
+3. `GET /loan/categories?entityType=` aur `POST /loan/requirement` usi draft file pe.
+4. Postman update karke STOP. Phase 5 mat chhedna.

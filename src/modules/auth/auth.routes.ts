@@ -5,6 +5,7 @@ import { requireAuth } from '../../middlewares/require-auth';
 import {
   logoutController,
   meController,
+  profileController,
   refreshController,
   requestOtpController,
   resendOtpController,
@@ -44,4 +45,5 @@ authRouter.post('/otp/resend', otpLimiter, resendOtpController);
 authRouter.post('/otp/verify', verifyLimiter, verifyOtpController);
 authRouter.post('/refresh', refreshController);
 authRouter.post('/logout', requireAuth, logoutController);
+authRouter.patch('/profile', requireAuth, profileController);
 authRouter.get('/me', requireAuth, meController);

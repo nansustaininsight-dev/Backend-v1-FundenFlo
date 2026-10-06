@@ -9,7 +9,8 @@
     { "key": "mobile", "value": "9876543210" },
     { "key": "otp", "value": "123456" },
     { "key": "token", "value": "" },
-    { "key": "refreshToken", "value": "" }
+    { "key": "refreshToken", "value": "" },
+    { "key": "loanFileId", "value": "" }
   ],
   "item": [
     {
@@ -134,6 +135,70 @@
             },
             "url": "{{baseUrl}}/auth/logout",
             "description": "Revokes the refresh token. The access token stays valid until it expires (15 minutes)."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "item": [
+        {
+          "name": "Save profile",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"Rohit Sharma\",\n  \"pan\": \"ABCDE1234F\",\n  \"dob\": \"15/08/1996\"\n}"
+            },
+            "url": "{{baseUrl}}/auth/profile",
+            "description": "Saves the name, PAN and date of birth from Verify Details and the Profile screen. Mobile number cannot be changed. Run Verify OTP first so {{token}} is set."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Borrower",
+      "item": [
+        {
+          "name": "Save entity type",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "  pm.collectionVariables.set('loanFileId', pm.response.json().id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entityType\": \"msme\"\n}"
+            },
+            "url": "{{baseUrl}}/borrower/entity-type",
+            "description": "Step 1. msme = Business / MSME. individual = Salaried or self-employed. Calling it again updates the same draft. It does not save the loan amount."
+          }
+        },
+        {
+          "name": "Get entity type",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+            "url": "{{baseUrl}}/borrower/entity-type",
+            "description": "Returns the current draft choice. 404 if Step 1 has not been saved yet."
           }
         }
       ]
