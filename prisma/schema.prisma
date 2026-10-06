@@ -6,3 +6,47 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+enum Role {
+  borrower
+}
+
+model User {
+  id            String         @id @default(uuid())
+  mobile        String         @unique
+  countryCode   String         @default("+91")
+  fullName      String?
+  pan           String?        @unique
+  dob           DateTime?      @db.Date
+  referralCode  String?
+  role          Role           @default(borrower)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  refreshTokens RefreshToken[]
+}
+
+model OtpChallenge {
+  id                String    @id @default(uuid())
+  mobile            String
+  codeHash          String
+  referralCode      String?
+  expiresAt         DateTime
+  attempts          Int       @default(0)
+  resendAvailableAt DateTime
+  consumedAt        DateTime?
+  createdAt         DateTime  @default(now())
+
+  @@index([mobile, createdAt])
+}
+
+model RefreshToken {
+  id        String    @id @default(uuid())
+  userId    String
+  tokenHash String
+  expiresAt DateTime
+  revokedAt DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}

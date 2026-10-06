@@ -11,5 +11,15 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
+  {
+    files: ['src/types/**/*.ts'],
+    rules: { '@typescript-eslint/no-namespace': 'off' },
+  },
+  {
+    files: ['scripts/**/*.mjs'],
+    languageOptions: {
+      globals: { console: 'readonly', setInterval: 'readonly' },
+    },
+  },
   prettier,
 );

@@ -3,8 +3,8 @@
 > Agla phase shuru karne se pehle **sirf ye file** padho. Poora code dobara review mat karo.
 >
 > Last update: 6 Oct 2026
-> Current phase: **Phase 1 complete**
-> Next phase: **Phase 2 — Authentication** — user ki permission ke bina start mat karo
+> Current phase: **Phase 2 complete**
+> Next phase: **Phase 3 — Profile + Individual/MSME** — user ki permission ke bina start mat karo
 
 ## Sources (source of truth)
 
@@ -45,7 +45,7 @@
 |---|---|---|
 | 0 | Analysis | Done (ye file) |
 | 1 | Project setup + health | Done |
-| 2 | Authentication | Not started — WAIT |
+| 2 | Authentication | Done |
 | 3 | Profile + Individual/MSME | Not started |
 | 4 | Loan application | Not started |
 | 5 | Documents + verification | Not started |
@@ -291,11 +291,61 @@ npm run dev            # terminal 2
 curl http://127.0.0.1:4000/api/v1/health
 ```
 
-## Next session — Phase 2 start checklist
+## Phase 2 result — Authentication
 
-1. Ye file padho. Phase 1 health green hai ya nahi, section "Phase 1 result" dekho.
-2. User ne Phase 2 allow kiya hai tab hi OTP tables migrate karo.
-3. SMS provider interface + dev mock. Secrets `.env` me.
-4. Routes: request, verify, resend, logout + `requireAuth`.
-5. Postman folder `Auth`.
-6. Is file me Phase 2 result likh ke STOP.
+Implemented:
+- Tables: `User`, `OtpChallenge`, `RefreshToken`. Migration `20261006085753_auth_otp`.
+- `POST /api/v1/auth/otp/request` → `{ resendIn: 30 }`
+- `POST /api/v1/auth/otp/resend` → `{ resendIn: 30 }`
+- `POST /api/v1/auth/otp/verify` → `{ token, refreshToken, user }`
+- `POST /api/v1/auth/refresh` → naya `{ token, refreshToken, user }` (purana refresh token burn)
+- `POST /api/v1/auth/logout` Bearer + `{ refreshToken }` → `{ ok: true }`
+- `GET /api/v1/auth/me` Bearer → `{ user }` protected route
+- Dev SMS: `SmsProvider` interface + `DevSmsProvider`. Real SMS baad me isi interface pe lagega.
+- Dev OTP `123456` (`OTP_DEV_CODE`). Production me ye code use nahi hota, aur mock SMS `SMS_NOT_CONFIGURED` throw karta hai.
+- OTP bcrypt hash. Refresh token ka sirf SHA-256 hash DB me hai.
+- Access JWT 15 min. Refresh 30 din. Logout refresh revoke karta hai. Access token 15 min tak valid rehta hai (denylist nahi, jaan-boojh ke).
+- Purana refresh dobara use ho to us user ke saare refresh tokens revoke (`REFRESH_REUSED`).
+
+Limits (assumption, product doc me number nahi the — yahi use ho rahe hain):
+- OTP expiry 5 min
+- resend cooldown 30 sec
+- 5 galat attempts, phir code lock
+- 5 OTP requests / 15 min / mobile
+- IP limit: request+resend 10 / 15 min, verify 20 / 15 min
+
+Referral: format `4–12` letters/numbers, uppercase save. Partner table check **nahi** (rule missing). Sirf naye user pe save hota hai.
+
+Profile `PATCH /auth/profile` is phase me nahi. Woh Phase 3 hai. `fullName`, `pan`, `dob` columns table me empty hain.
+
+Important files:
+- `src/modules/auth/*`
+- `src/middlewares/require-auth.ts`
+- `prisma/schema.prisma`
+- `postman/FundenFlo.postman_collection.json` — Health + Auth. Verify/Refresh token variables khud save karte hain.
+
+Test (pass):
+- invalid mobile 400
+- request 200, turant dusri request 429 `OTP_COOLDOWN`
+- galat OTP 401 `OTP_INVALID`, sahi `123456` 200
+- `/auth/me` bina token 401, token ke saath 200
+- refresh naya token deta hai; purana refresh `REFRESH_REUSED`
+- logout ke baad refresh 401
+- 5 galat attempts `OTP_LOCKED`, uske baad sahi code bhi nahi chalta
+- referral `ffdsa1` user pe `FFDSA1` save
+- `tsc` aur `eslint` pass
+- server log: `[dev-sms] OTP for +91 ...: 123456`
+
+Frontend connect:
+- App `.env`: `EXPO_PUBLIC_API_URL=http://COMPUTER_LAN_IP:4000/api/v1`
+- Phone pe `localhost` mat likhna — woh phone khud hai. Computer aur phone same Wi-Fi.
+- App pehle se `POST /auth/otp/request` aur `POST /auth/otp/verify` call karti hai, aur `token` save karti hai.
+- `refreshToken` response me extra hai. Current app use nahi karti. Baad me app update karni hogi, warna 15 min baad token expire ho jayega.
+
+## Next session — Phase 3 start checklist
+
+1. Ye file padho. Phase 2 APIs upar hain. Postman collection `postman/FundenFlo.postman_collection.json`.
+2. User ne Phase 3 allow kiya ho tabhi profile + entity type.
+3. `PATCH /auth/profile` name, PAN, DOB. Mobile change nahi.
+4. Entity type loan file pe, user pe nahi.
+5. Collection me naye requests add karke ye file update karo. Phir STOP.
