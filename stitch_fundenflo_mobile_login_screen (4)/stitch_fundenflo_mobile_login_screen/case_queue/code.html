@@ -1,0 +1,712 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary":"#ffffff","background":"#f8f9fc","gold-deep":"#C59B27","surface-container":"#eceef0","on-secondary-fixed":"#001b3c","secondary-fixed-dim":"#a8c8ff","secondary-container":"#a8c8ff","on-secondary":"#ffffff","secondary":"#3f5f90","inverse-surface":"#2e3133","on-error":"#ffffff","tertiary-fixed-dim":"#ffbb06","on-background":"#191c1e","primary-fixed-dim":"#b9c7e4","primary-container":"#0d1c32","error":"#ba1a1a","error-container":"#ffdad6","surface-bright":"#f8f9fc","on-secondary-fixed-variant":"#264776","on-tertiary-fixed":"#271900","on-error-container":"#93000a","outline":"#75777e","surface-dim":"#d8dadd","surface-container-high":"#e7e8eb","surface-container-low":"#f2f4f6","on-secondary-container":"#335383","secondary-fixed":"#d6e3ff","on-primary":"#ffffff","on-primary-fixed":"#0d1c32","on-surface-variant":"#44474d","on-surface":"#191c1e","status-success":"#1F7A43","surface-subtle":"#F0F4F8","surface-base":"#F8FBFF","border-subtle":"#E2E8F0","surface-tint":"#515f78","primary-fixed":"#d6e3ff","surface-container-highest":"#e1e2e5","tertiary-fixed":"#ffdea5","on-primary-container":"#76849f","inverse-primary":"#b9c7e4","surface":"#f8f9fc","primary":"#000000","outline-variant":"#c5c6cd","on-tertiary-container":"#ab7c00","tertiary-container":"#271900","tertiary":"#000000","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#5d4200","on-primary-fixed-variant":"#39475f","text-muted":"#64748B","inverse-on-surface":"#eff1f3","card-surface":"#FFFFFF","surface-variant":"#e1e2e5"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2rem","space-xs":"0.25rem","gutter":"1rem","space-lg":"1.5rem","margin":"1.25rem","space-md":"1rem","space-sm":"0.5rem"},fontFamily:{"label-lg":["Inter"],"display-lg-mobile":["Space Grotesk"],"label-sm":["Inter"],"headline-lg":["Space Grotesk"],"body-md":["Inter"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-lg":["Inter"],"label-md":["Inter"],"display-lg":["Space Grotesk"],"body-sm":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-primary-container"><img alt="FundenFlo official brand logo: a crisp geometric gold circular ring looping into an upward-pointing dynamic arrow symbolizing growth, alongside bold clean lettering 'FundenFlo' and small refined subtext 'The Right Funding, At the Right Time'.. Brand logo. - Primary color: #0a192f
+- Font: spaceGrotesk
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WDwzGoAuF17geapuelgvxcuhEfDj4Ml0jcePbZShV7GOEHvsNCUQgRsWQ6ISnCJXeLOK5R-hfIUUDxbR3csWXMBHKCSM8j5rF0X0R4GfuhtffWrrVHqPlKi24UpWYRZCniJXAhVl9SRpTRqW8-XUuXfIYrDuWsKiM_I9W3ccOQnXi9-s4eAUz3xEoUfFtz5h9uT_VoX72CbFTTyAa_UdHE4sVhw06Zr5-bYaOc2CMhaiRgjIbrfyfhZA"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight">FundenFlo</span><span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider">Ops Console</span></div></div><div class="px-space-md py-space-sm"><div class="font-label-sm text-label-sm text-on-primary-container uppercase px-space-sm mb-space-xs">Operations</div><nav class="space-y-space-xs" data-active-classes="bg-surface-container-lowest/10 text-on-primary font-label-lg font-bold border-l-4 border-tertiary-fixed-dim"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-surface-container-lowest/10 text-on-primary font-label-lg font-bold border-l-4 border-tertiary-fixed-dim" data-path="case-queue" href="#"><span class="material-symbols-outlined text-[20px]">inbox</span><span class="">Case Queue</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim font-label-lg text-label-lg hover:bg-surface-container-lowest/10 hover:text-on-primary transition-colors" data-path="lenders-products" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="">Lenders &amp; Products</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim font-label-lg text-label-lg hover:bg-surface-container-lowest/10 hover:text-on-primary transition-colors" data-path="partners" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span><span class="">Partners</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim font-label-lg text-label-lg hover:bg-surface-container-lowest/10 hover:text-on-primary transition-colors" data-path="fraud-review" href="#"><span class="material-symbols-outlined text-[20px]">gshield</span><span class="">Fraud Review</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim font-label-lg text-label-lg hover:bg-surface-container-lowest/10 hover:text-on-primary transition-colors" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="">Audit Log</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim font-label-lg text-label-lg hover:bg-surface-container-lowest/10 hover:text-on-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="">Settings</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-lowest/5"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider">Node Active</span><span class="h-2 w-2 rounded-full bg-status-success"></span></div><div class="font-body-sm text-body-sm text-on-primary font-medium truncate">ops-lead-delhi@fundenflo.in</div><div class="font-label-sm text-label-sm text-on-primary-container mt-space-xs">v2.4.12 Enterprise</div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-3xl"><div class="relative flex-1 max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest" placeholder="Search cases by ID, PAN, borrower..." type="text"></div><div class="flex items-center gap-space-xs"><button class="h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1" type="button"><span class="">Status</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button><button class="h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1" type="button"><span class="">Category</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button><button class="h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1" type="button"><span class="">City</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button><button class="h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[14px] text-error">flag</span><span class="">Flagged only</span></button></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-status-success ring-2 ring-surface-container-lowest"></span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-semibold">R. Singhania</span><span class="font-label-sm text-[10px] text-on-surface-variant">Lead Credit Ops Reviewer</span></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Style Helpers -->
+<style>
+    /* Clean custom scrollbar for detail panel */
+    .drawer-scroll::-webkit-scrollbar {
+      width: 4px;
+      display: block;
+    }
+    .drawer-scroll::-webkit-scrollbar-thumb {
+      background-color: #e2e8f0;
+      border-radius: 9999px;
+    }
+    .drawer-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  </style>
+<!-- Top Filter & Search Action Bar -->
+<div class="w-full bg-surface-container-lowest px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<!-- Filter 1: Status -->
+<div class="relative inline-block text-left">
+<button class="h-9 px-space-md rounded-lg bg-surface-subtle text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1.5" id="filterStatusBtn" type="button">
+<span class="text-text-muted">Status:</span>
+<span class="font-semibold text-on-surface">All</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Filter 2: Category -->
+<div class="relative inline-block text-left">
+<button class="h-9 px-space-md rounded-lg bg-surface-subtle text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1.5" type="button">
+<span class="text-text-muted">Category:</span>
+<span class="font-semibold text-on-surface">All</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Filter 3: City -->
+<div class="relative inline-block text-left">
+<button class="h-9 px-space-md rounded-lg bg-surface-subtle text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1.5" type="button">
+<span class="text-text-muted">City:</span>
+<span class="font-semibold text-on-surface">All</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Filter 4: Flagged toggle chip -->
+<button class="h-9 px-space-md rounded-lg bg-surface-subtle text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all flex items-center gap-1.5" id="flaggedToggle" onclick="toggleFlaggedFilter()" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">flag</span>
+<span class="">Flagged only</span>
+<span class="ml-1 px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-surface-container-high text-on-surface">2</span>
+</button>
+</div>
+<div class="h-4 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="text-text-muted font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+<span class="">Auto-sync connected</span>
+</div>
+</div>
+<!-- Reviewer Profile Widget -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm pl-space-md">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-[13px] font-semibold tracking-wide">
+            AR
+          </div>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-status-success ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col text-left">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Aditi Rao</span>
+<span class="material-symbols-outlined text-[14px] text-status-success" title="Verified Credit Ops Reviewer">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Senior Credit Ops Reviewer</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Viewport Split Layout -->
+<div class="w-full flex items-start justify-between min-h-[calc(100vh-8rem)]">
+<!-- LEFT PANEL: Active Queue Table (Flexible Width) -->
+<div class="flex-1 min-w-0 px-space-lg py-space-lg flex flex-col">
+<!-- Section Header -->
+<div class="flex items-start justify-between mb-space-md">
+<div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Case Queue</h1>
+<span class="px-2 py-0.5 rounded-full bg-surface-subtle text-text-muted font-label-sm text-label-sm">6 active files</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-0.5">Active review pipeline &amp; automated eligibility audit</p>
+</div>
+<!-- Batch Tools -->
+<div class="flex items-center gap-space-xs">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-subtle transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-muted">tune</span>
+<span class="">Customize columns</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-subtle transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-muted">file_download</span>
+<span class="">Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Table Frame -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-subtle text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold" scope="col">Case ID</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Borrower</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Segment</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Category</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Status</th>
+<th class="py-3 px-space-md font-semibold text-center" scope="col">Health</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Flag</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Assigned</th>
+<th class="py-3 px-space-md font-semibold text-right" scope="col">SLA Timer</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm text-on-surface">
+<!-- ROW 1: ACTIVE / SELECTED CASE (FF-24-08931) -->
+<tr class="cursor-pointer bg-secondary-fixed/30 hover:bg-secondary-fixed/40 transition-colors relative" id="row-FF-24-08931" onclick="selectRow('FF-24-08931')">
+<td class="py-3.5 px-space-md font-label-md text-label-md text-primary font-bold whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-6 rounded-full bg-primary-container"></span>
+<span class="text-on-secondary-fixed">FF-24-08931</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Sharma Autocraft Pvt Ltd</span>
+<span class="text-[11px] text-text-muted font-mono">U29304MH · Pune</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-subtle text-secondary">MSME</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Working Capital</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-tertiary-fixed/60 text-on-tertiary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-deep"></span>
+                    Under review
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center justify-center font-label-md text-label-md font-bold px-2 py-0.5 rounded-md bg-surface-subtle text-primary-container">
+                    72/100
+                  </div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<!-- REQUIRED HUMAN REVIEW BADGE #1 (NO 'FRAUD' WORD) -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-50 text-amber-900 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-600">warning</span>
+                    Needs human review
+                  </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-medium text-on-surface">Aditi Rao</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm bg-amber-50 text-amber-800 font-semibold">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                    4h left
+                  </span>
+</td>
+</tr>
+<!-- ROW 2: Kulkarni Textiles -->
+<tr class="cursor-pointer hover:bg-surface-subtle transition-colors" id="row-FF-24-08930" onclick="selectRow('FF-24-08930')">
+<td class="py-3.5 px-space-md font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span class="">FF-24-08930</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Kulkarni Agro Textiles</span>
+<span class="text-[11px] text-text-muted font-mono">U17299GJ · Surat</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-subtle text-secondary">MSME</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Machinery Loan</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                    Documents pending
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center justify-center font-label-md text-label-md font-bold px-2 py-0.5 rounded-md bg-surface-subtle text-on-surface">
+                    68/100
+                  </div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-text-muted text-center block">—</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-medium text-on-surface">Karan V.</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="text-text-muted text-label-sm font-label-sm font-medium">18h left</span>
+</td>
+</tr>
+<!-- ROW 3: Vardhan Healthcare -->
+<tr class="cursor-pointer hover:bg-surface-subtle transition-colors" id="row-FF-24-08929" onclick="selectRow('FF-24-08929')">
+<td class="py-3.5 px-space-md font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span class="">FF-24-08929</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Dr. Vardhan Diagnostics LLP</span>
+<span class="text-[11px] text-text-muted font-mono">AAA-9812 · Bengaluru</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-subtle text-secondary">Individual</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Equipment Finance</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-secondary-container/40 text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Sent to lender
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center justify-center font-label-md text-label-md font-bold px-2 py-0.5 rounded-md bg-status-success/10 text-status-success">
+                    84/100
+                  </div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 text-status-success text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Verified
+                  </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-medium text-on-surface">Aditi Rao</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="text-text-muted text-label-sm font-label-sm font-medium">1d left</span>
+</td>
+</tr>
+<!-- ROW 4: NexGen Solar Infra -->
+<tr class="cursor-pointer hover:bg-surface-subtle transition-colors" id="row-FF-24-08928" onclick="selectRow('FF-24-08928')">
+<td class="py-3.5 px-space-md font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span class="">FF-24-08928</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">NexGen Solar EPC Ltd</span>
+<span class="text-[11px] text-text-muted font-mono">U40108DL · New Delhi</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-subtle text-secondary">MSME</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Business Term Loan</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-tertiary-fixed/60 text-on-tertiary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-deep"></span>
+                    Under review
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center justify-center font-label-md text-label-md font-bold px-2 py-0.5 rounded-md bg-error-container/50 text-error">
+                    59/100
+                  </div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<!-- REQUIRED HUMAN REVIEW BADGE #2 (NO 'FRAUD' WORD) -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-50 text-amber-900 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-600">warning</span>
+                    Needs human review
+                  </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-text-muted italic">Unassigned</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm bg-error-container text-on-error-container font-semibold">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+                    2h left
+                  </span>
+</td>
+</tr>
+<!-- ROW 5: Premier Polychem -->
+<tr class="cursor-pointer hover:bg-surface-subtle transition-colors" id="row-FF-24-08927" onclick="selectRow('FF-24-08927')">
+<td class="py-3.5 px-space-md font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span class="">FF-24-08927</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Premier Polychem Works</span>
+<span class="text-[11px] text-text-muted font-mono">U24100TN · Chennai</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-subtle text-secondary">MSME</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Overdraft</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-primary-container text-on-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                    Sanctioned
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center justify-center font-label-md text-label-md font-bold px-2 py-0.5 rounded-md bg-status-success/10 text-status-success">
+                    76/100
+                  </div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 text-status-success text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Verified
+                  </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-medium text-on-surface">Neha S.</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="text-text-muted text-label-sm font-label-sm font-medium">Completed</span>
+</td>
+</tr>
+<!-- ROW 6: Sapphire Logistics -->
+<tr class="cursor-pointer hover:bg-surface-subtle transition-colors" id="row-FF-24-08926" onclick="selectRow('FF-24-08926')">
+<td class="py-3.5 px-space-md font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span class="">FF-24-08926</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Sapphire Cold Chain Solutions</span>
+<span class="text-[11px] text-text-muted font-mono">U63090KA · Bengaluru</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-subtle text-secondary">MSME</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Working Capital</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-secondary-container/40 text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Sent to lender
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="inline-flex items-center justify-center font-label-md text-label-md font-bold px-2 py-0.5 rounded-md bg-surface-subtle text-on-surface">
+                    81/100
+                  </div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-text-muted text-center block">—</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-medium text-on-surface">Aditi Rao</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="text-text-muted text-label-sm font-label-sm font-medium">14h left</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest flex items-center justify-between text-body-sm font-body-sm text-text-muted">
+<span class="">Showing <strong>1-6</strong> of 28 open cases across 4 lenders</span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-2.5 rounded bg-surface-subtle hover:bg-surface-container text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 font-semibold text-on-surface font-label-sm text-label-sm">Page 1 of 5</span>
+<button class="h-8 px-2.5 rounded bg-surface-subtle hover:bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Micro-Metrics Banner -->
+
+</div>
+<!-- RIGHT PANEL: 420px Fixed Width Detail Drawer for FF-24-08931 -->
+<aside class="w-[420px] shrink-0 bg-card-surface shadow-xl h-[calc(100vh-4rem)] sticky top-16 flex flex-col justify-between z-20">
+<!-- Drawer Header -->
+<div class="p-space-md bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-mono text-secondary">FF-24-08931</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-text-muted">Direct Sourcing</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Sharma Autocraft Pvt Ltd</h2>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-text-muted hover:text-on-surface hover:bg-surface-subtle transition-colors" title="Open in dedicated tab">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="p-1.5 rounded-lg text-text-muted hover:text-on-surface hover:bg-surface-subtle transition-colors" title="Minimize panel">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Badges Bar -->
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-tertiary-fixed/60 text-on-tertiary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-deep"></span>
+            Under review
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[13px] text-amber-600">warning</span>
+            Needs human review
+          </span>
+</div>
+</div>
+<!-- Drawer Scrollable Content -->
+<div class="flex-1 overflow-y-auto drawer-scroll p-space-md space-y-space-lg">
+<!-- SECTION 1: EXTRACTED DATA -->
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">document_scanner</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold uppercase tracking-wider">Extracted Data</h3>
+</div>
+<span class="text-[11px] font-label-sm font-medium text-text-muted">AA &amp; GSTN verified</span>
+</div>
+<div class="grid grid-cols-1 gap-space-xs">
+<!-- Inflow Metric Card -->
+<div class="p-space-sm rounded-lg bg-surface-subtle flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-text-muted">Avg monthly inflow</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">₹8.2L</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-label-sm font-bold bg-status-success/15 text-status-success flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                96% confidence
+              </span>
+</div>
+<!-- GST Metric Card -->
+<div class="p-space-sm rounded-lg bg-surface-subtle flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-text-muted">GST turnover FY25</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">₹1.1 Cr</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-label-sm font-bold bg-status-success/15 text-status-success flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                91% confidence
+              </span>
+</div>
+<!-- Existing EMI Metric Card -->
+<div class="p-space-sm rounded-lg bg-surface-subtle flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-text-muted">Existing EMIs</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">₹3.9L<span class="text-xs text-text-muted font-normal">/month</span></span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-label-sm font-bold bg-amber-100 text-amber-800 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">info</span>
+                88% confidence
+              </span>
+</div>
+</div>
+<p class="font-body-sm text-[11px] text-text-muted mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+            Extracted via automated GSTN &amp; Account Aggregator fetch
+          </p>
+</div>
+<!-- SECTION 2: SCORE BREAKDOWN 72/100 -->
+<div class="bg-surface-subtle p-space-md rounded-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">analytics</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold uppercase tracking-wider">Score breakdown</h3>
+</div>
+<span class="font-body-sm text-[11px] text-text-muted">Weighted Risk Assessment Matrix</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-none">72<span class="text-sm font-normal text-text-muted">/100</span></span>
+<span class="text-[10px] font-label-sm uppercase tracking-wide text-status-success font-semibold mt-1">Tier-2 Prime</span>
+</div>
+</div>
+<!-- 6 Mini Progress Bars -->
+<div class="space-y-space-sm mt-space-md">
+<!-- Metric 1 -->
+<div>
+<div class="flex justify-between items-center text-body-sm text-label-md mb-1">
+<span class="text-on-surface font-medium">Cash Flow Stability</span>
+<span class="font-mono font-semibold text-on-surface">78%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all" style="width: 78%"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div>
+<div class="flex justify-between items-center text-body-sm text-label-md mb-1">
+<span class="text-on-surface font-medium">Debt Service Coverage (DSCR)</span>
+<span class="font-mono font-semibold text-amber-700">65%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-amber-600 h-full rounded-full transition-all" style="width: 65%"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div>
+<div class="flex justify-between items-center text-body-sm text-label-md mb-1">
+<span class="text-on-surface font-medium">GST Compliance &amp; Consistency</span>
+<span class="font-mono font-semibold text-status-success">92%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-status-success h-full rounded-full transition-all" style="width: 92%"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div>
+<div class="flex justify-between items-center text-body-sm text-label-md mb-1">
+<span class="text-on-surface font-medium">Banking Run Quality</span>
+<span class="font-mono font-semibold text-on-surface">74%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all" style="width: 74%"></div>
+</div>
+</div>
+<!-- Metric 5 -->
+<div>
+<div class="flex justify-between items-center text-body-sm text-label-md mb-1">
+<span class="text-on-surface font-medium">Vintage &amp; Promoter Standing</span>
+<span class="font-mono font-semibold text-on-surface">80%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all" style="width: 80%"></div>
+</div>
+</div>
+<!-- Metric 6 -->
+<div>
+<div class="flex justify-between items-center text-body-sm text-label-md mb-1">
+<span class="text-on-surface font-medium">Repayment Track</span>
+<span class="font-mono font-semibold text-amber-700">60%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-amber-600 h-full rounded-full transition-all" style="width: 60%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: AUDIT TRAIL LIST -->
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">history</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold uppercase tracking-wider">Audit trail</h3>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">4 recorded events</span>
+</div>
+<!-- Vertical Timeline -->
+<div class="relative pl-4 space-y-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Event 1 (Alert) -->
+<div class="relative">
+<div class="absolute -left-4 top-1 w-2.5 h-2.5 rounded-full bg-amber-500 ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">Today, 11:30 AM</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-mono bg-surface-subtle text-secondary font-semibold">System Bot</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-amber-900 mt-0.5">Flagged for review</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-0.5 leading-snug">Inflow deviation detected vs reported ITR</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative">
+<div class="absolute -left-4 top-1 w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">Today, 09:15 AM</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-mono bg-surface-subtle text-on-surface font-semibold">Aditi Rao</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5">Assigned case</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-0.5 leading-snug">Routine intake review</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative">
+<div class="absolute -left-4 top-1 w-2.5 h-2.5 rounded-full bg-status-success ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">12 Sep, 16:40</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-mono bg-surface-subtle text-secondary font-semibold">System Bot</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5">Document indexing complete</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-0.5 leading-snug">3 of 3 files parsed</p>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="relative">
+<div class="absolute -left-4 top-1 w-2.5 h-2.5 rounded-full bg-outline ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">12 Sep, 14:10</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-mono bg-surface-subtle text-on-surface font-semibold">CA Rohit Sharma</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5">Case initiated</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-0.5 leading-snug">Sourced via Partner Portal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Sticky Action Footer -->
+<div class="p-space-md bg-surface-container-lowest shadow-[0_-4px_16px_rgba(0,0,0,0.04)] flex items-center gap-space-sm">
+<button class="flex-1 h-12 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">contact_page</span>
+<span class="">Request document</span>
+</button>
+<button class="flex-1 h-12 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-secondary transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="">Approve for submission</span>
+</button>
+</div>
+</aside>
+</div>
+<!-- Interactive Row Selection & Filter Script -->
+<script>
+    let isFlaggedFiltered = false;
+
+    function selectRow(caseId) {
+      // Clear highlight on all rows
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(r => {
+        r.classList.remove('bg-secondary-fixed/30', 'hover:bg-secondary-fixed/40');
+        r.classList.add('hover:bg-surface-subtle');
+        const bar = r.querySelector('td:first-child span.rounded-full');
+        if (bar) {
+          bar.classList.remove('bg-primary-container');
+          bar.classList.add('bg-transparent');
+        }
+      });
+
+      // Highlight target row
+      const target = document.getElementById('row-' + caseId);
+      if (target) {
+        target.classList.remove('hover:bg-surface-subtle');
+        target.classList.add('bg-secondary-fixed/30', 'hover:bg-secondary-fixed/40');
+        const activeBar = target.querySelector('td:first-child span.rounded-full');
+        if (activeBar) {
+          activeBar.classList.remove('bg-transparent');
+          activeBar.classList.add('bg-primary-container');
+        }
+      }
+    }
+
+    function toggleFlaggedFilter() {
+      isFlaggedFiltered = !isFlaggedFiltered;
+      const btn = document.getElementById('flaggedToggle');
+      const rows = document.querySelectorAll('tbody tr');
+
+      if (isFlaggedFiltered) {
+        btn.classList.add('bg-primary-container', 'text-on-primary');
+        btn.classList.remove('bg-surface-subtle', 'text-on-surface-variant');
+        
+        // Hide non-flagged rows
+        rows.forEach(r => {
+          const hasFlag = r.innerText.includes('Needs human review');
+          if (!hasFlag) {
+            r.style.display = 'none';
+          } else {
+            r.style.display = '';
+          }
+        });
+      } else {
+        btn.classList.remove('bg-primary-container', 'text-on-primary');
+        btn.classList.add('bg-surface-subtle', 'text-on-surface-variant');
+        
+        // Show all
+        rows.forEach(r => {
+          r.style.display = '';
+        });
+      }
+    }
+  </script>
+</div></main></div>
+
+</body></html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-base": "#F8FBFF", "error-container": "#ffdad6", "on-surface-variant": "#44474d", "surface-variant": "#e1e2e5", "tertiary-fixed-dim": "#ffbb06", "surface-bright": "#f8f9fc", "on-tertiary-fixed-variant": "#5d4200", "on-primary-fixed-variant": "#39475f", "primary-container": "#0d1c32", "inverse-on-surface": "#eff1f3", "surface-tint": "#515f78", "surface-container-lowest": "#ffffff", "on-secondary-container": "#335383", "surface-container-high": "#e7e8eb", "primary-fixed": "#d6e3ff", "surface": "#f8f9fc", "surface-container-low": "#f2f4f6", "status-success": "#1F7A43", "secondary-fixed-dim": "#a8c8ff", "card-surface": "#FFFFFF", "surface-subtle": "#F0F4F8", "error": "#ba1a1a", "surface-container-highest": "#e1e2e5", "on-error-container": "#93000a", "primary-fixed-dim": "#b9c7e4", "on-tertiary": "#ffffff", "tertiary": "#000000", "surface-dim": "#d8dadd", "on-primary": "#ffffff", "on-primary-container": "#76849f", "surface-container": "#eceef0", "inverse-surface": "#2e3133", "on-tertiary-fixed": "#271900", "inverse-primary": "#b9c7e4", "on-secondary": "#ffffff", "gold-deep": "#C59B27", "primary": "#000000", "on-error": "#ffffff", "secondary": "#3f5f90", "tertiary-container": "#271900", "text-muted": "#64748B", "border-subtle": "#E2E8F0", "outline": "#75777e", "on-tertiary-container": "#ab7c00", "on-secondary-fixed-variant": "#264776", "on-background": "#191c1e", "secondary-container": "#a8c8ff", "on-secondary-fixed": "#001b3c", "tertiary-fixed": "#ffdea5", "on-primary-fixed": "#0d1c32", "on-surface": "#191c1e", "outline-variant": "#c5c6cd", "background": "#f8f9fc", "secondary-fixed": "#d6e3ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "margin": "1.25rem", "space-xl": "2rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1rem" }, fontFamily: { "display-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "label-lg": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Space Grotesk"], "label-md": ["Inter"], "display-lg": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "body-md": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "30px", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin flex items-center justify-between relative"><button aria-label="Go back" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-secondary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="absolute inset-x-0 mx-auto text-center font-headline-sm text-headline-sm text-on-surface pointer-events-none tracking-tight">Application Status</h1><div aria-hidden="true" class="w-11 h-11"></div></div></header><main class="flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Top Advisory Micro-Notice -->
+<div class="flex items-center justify-between py-space-sm mb-space-xs text-text-muted font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+<span class="tracking-wide uppercase font-label-sm text-label-sm">Active Case Desk</span>
+</div>
+<span class="font-mono text-label-sm text-text-muted">v2.4.9</span>
+</div>
+<!-- Summary Card -->
+<section class="bg-card-surface rounded-2xl p-5 shadow-sm mb-space-md relative overflow-hidden">
+<div class="flex items-start justify-between gap-2 mb-3">
+<div>
+<span class="text-text-muted font-label-sm text-label-sm uppercase tracking-wider block mb-0.5">Facility &amp; Underwriter</span>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Working Capital · Lender A</h2>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-subtle font-label-sm text-label-sm text-secondary font-medium">
+        Priority SLA
+      </span>
+</div>
+<div class="my-3">
+<span class="font-body-sm text-body-sm text-text-muted block mb-0.5">Requested Facility</span>
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight font-headline-lg flex items-baseline gap-1">
+<span>₹25,00,000</span>
+</div>
+</div>
+<div class="pt-3 flex items-center justify-between bg-surface-subtle -mx-5 -mb-5 px-5 py-3 mt-4">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm text-text-muted">App ID</span>
+<span class="font-label-md text-label-md text-on-surface font-mono" id="appIdVal">FF-24-08931</span>
+</div>
+<button aria-label="Copy Application ID" class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary hover:text-primary transition-colors focus:outline-none" id="copyBtn" onclick="navigator.clipboard.writeText('FF-24-08931'); document.getElementById('copySuccess').classList.remove('opacity-0'); setTimeout(() =&gt; document.getElementById('copySuccess').classList.add('opacity-0'), 1500);" type="button">
+<span class="opacity-0 transition-opacity font-label-sm text-status-success font-medium" id="copySuccess">Copied!</span>
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</section>
+<!-- Amber Action Required Banner -->
+<section class="rounded-2xl p-4 mb-space-lg shadow-sm bg-tertiary-fixed/30 relative">
+<div class="flex items-start justify-between gap-3">
+<div class="flex gap-3">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0 mt-0.5 text-on-tertiary-container shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+<div class="min-w-0 pr-1">
+<h3 class="font-label-lg text-label-lg text-on-tertiary-fixed-variant leading-snug">Lender asked for 1 more document</h3>
+<p class="font-body-sm text-body-sm text-on-tertiary-container mt-0.5 font-medium">GST return – Q2 FY25</p>
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed-variant/80 mt-1 block">Due in 18 hrs to maintain queue position</span>
+</div>
+</div>
+<button class="shrink-0 bg-primary text-on-primary font-label-sm text-label-sm px-3.5 py-2 rounded-lg font-semibold shadow-sm active:scale-95 transition-transform" type="button">
+        Upload now
+      </button>
+</div>
+</section>
+<!-- Status Section with Connected Timeline -->
+<section class="bg-card-surface rounded-2xl p-5 shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-5">
+<h3 class="font-headline-sm text-headline-sm text-primary">Status</h3>
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider font-semibold">Underwriting Node 03</span>
+</div>
+<!-- Timeline Wrapper -->
+<div class="relative flex flex-col">
+<!-- Step 1: Documents complete -->
+<div class="relative flex items-start gap-4 pb-7">
+<!-- Connecting Line downwards (Solid Brand Navy) -->
+<div class="absolute left-3.5 top-7 bottom-0 w-[2px] bg-primary"></div>
+<!-- Indicator -->
+<div class="w-7 h-7 rounded-full bg-status-success/15 flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px] text-status-success font-bold" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<!-- Content -->
+<div class="flex-1 pt-0.5 flex items-center justify-between">
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Documents complete</p>
+<p class="font-body-sm text-body-sm text-text-muted">Digital verification sealed</p>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted font-medium ml-2 shrink-0">12 Sep</span>
+</div>
+</div>
+<!-- Step 2: Sent to lender -->
+<div class="relative flex items-start gap-4 pb-7">
+<!-- Connecting Line downwards (Solid Brand Navy) -->
+<div class="absolute left-3.5 top-7 bottom-0 w-[2px] bg-primary"></div>
+<!-- Indicator -->
+<div class="w-7 h-7 rounded-full bg-status-success/15 flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px] text-status-success font-bold" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<!-- Content -->
+<div class="flex-1 pt-0.5 flex items-center justify-between">
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Sent to lender</p>
+<p class="font-body-sm text-body-sm text-text-muted">Dispatched via secure API</p>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted font-medium ml-2 shrink-0">13 Sep</span>
+</div>
+</div>
+<!-- Step 3: Under review (CURRENT STEP) -->
+<div class="relative flex items-start gap-4 pb-7">
+<!-- Connecting Line downwards (Muted Grey) -->
+<div class="absolute left-3.5 top-7 bottom-0 w-[2px] bg-surface-container-highest"></div>
+<!-- Indicator with Pulse and Golden Halo -->
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 z-10">
+<span class="relative flex h-4 w-4 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-40"></span>
+<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-gold-deep shadow-sm"></span>
+</span>
+</div>
+<!-- Content -->
+<div class="flex-1 pt-0.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<p class="font-label-lg text-label-lg text-primary font-bold">Under review</p>
+<span class="px-2 py-0.5 rounded-full bg-gold-deep/15 text-gold-deep font-label-sm text-label-sm uppercase tracking-wide font-semibold">Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-gold-deep font-semibold">Now</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-1 leading-relaxed">
+            Lender is reviewing your file against business cashflows.
+          </p>
+</div>
+</div>
+<!-- Step 4: Sanctioned -->
+<div class="relative flex items-start gap-4 pb-7">
+<!-- Connecting Line downwards (Muted Grey) -->
+<div class="absolute left-3.5 top-7 bottom-0 w-[2px] bg-surface-container-highest"></div>
+<!-- Indicator -->
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 z-10">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-highest"></span>
+</div>
+<!-- Content -->
+<div class="flex-1 pt-0.5 flex items-center justify-between">
+<div>
+<p class="font-label-lg text-label-lg text-text-muted">Sanctioned</p>
+<p class="font-body-sm text-body-sm text-text-muted/60">Credit committee approval</p>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted/50">—</span>
+</div>
+</div>
+<!-- Step 5: Disbursed -->
+<div class="relative flex items-start gap-4">
+<!-- Indicator -->
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 z-10">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-highest"></span>
+</div>
+<!-- Content -->
+<div class="flex-1 pt-0.5 flex items-center justify-between">
+<div>
+<p class="font-label-lg text-label-lg text-text-muted">Disbursed</p>
+<p class="font-body-sm text-body-sm text-text-muted/60">RTGS to designated account</p>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted/50">—</span>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp Notification Channel Opt-in -->
+<section class="bg-card-surface rounded-2xl p-4 shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-status-success/10 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 fill-status-success" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.16 7.42C8.94 7.42 8.58 7.5 8.28 7.82C7.98 8.15 7.14 8.94 7.14 10.54C7.14 12.14 8.31 13.68 8.47 13.9C8.63 14.12 10.73 17.36 13.95 18.75C14.71 19.08 15.31 19.28 15.78 19.43C16.55 19.67 17.25 19.64 17.8 19.56C18.42 19.47 19.71 18.78 19.97 18.03C20.24 17.29 20.24 16.66 20.16 16.53C20.08 16.39 19.86 16.31 19.54 16.15C19.22 15.99 17.65 15.22 17.36 15.11C17.07 15.01 16.86 14.95 16.64 15.27C16.42 15.59 15.8 16.31 15.61 16.53C15.43 16.74 15.24 16.77 14.92 16.61C14.6 16.45 13.56 16.11 12.33 15.01C11.37 14.15 10.72 13.09 10.54 12.77C10.36 12.45 10.52 12.28 10.68 12.12C10.82 11.98 11 11.76 11.16 11.58C11.32 11.4 11.37 11.27 11.48 11.05C11.59 10.83 11.53 10.65 11.45 10.49C11.37 10.33 10.74 8.79 10.48 8.16C10.23 7.55 9.97 7.63 9.78 7.62C9.59 7.61 9.38 7.42 9.16 7.42Z"></path>
+</svg>
+</div>
+<div class="truncate">
+<label class="font-label-md text-label-md text-primary block truncate cursor-pointer font-semibold" for="waToggle">Get status updates on WhatsApp</label>
+<span class="font-body-sm text-body-sm text-text-muted">Instant underwriting notifications</span>
+</div>
+</div>
+<!-- Sovereign Styled Navy Toggle Switch -->
+<div class="relative shrink-0">
+<input checked="" class="sr-only peer" id="waToggle" onchange="const bubble = document.getElementById('waFeedback'); if(this.checked){bubble.innerText='Alerts Enabled';}else{bubble.innerText='Alerts Muted';} bubble.classList.remove('opacity-0'); setTimeout(()=&gt;bubble.classList.add('opacity-0'), 1200);" type="checkbox"/>
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-border-subtle after:border after:rounded-full after:h-6 after:w-6 after:transition-all cursor-pointer shadow-inner"></div>
+</div>
+</section>
+<!-- Interactive Subtle Toast Feedback -->
+<div class="flex justify-center mt-2">
+<span class="opacity-0 transition-opacity font-label-sm text-label-sm text-text-muted bg-surface-subtle px-3 py-1 rounded-full" id="waFeedback"></span>
+</div>
+<!-- Compliance Fiduciary Seal -->
+<div class="mt-4 text-center">
+<p class="font-label-sm text-label-sm text-text-muted/70 tracking-wide uppercase">
+      Encrypted under Reserve Bank of India Fiduciary Standards
+    </p>
+</div>
+</div></main></body></html>

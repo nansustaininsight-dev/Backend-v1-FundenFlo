@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-background": "#191c1e", "primary": "#000000", "status-success": "#1F7A43", "tertiary-fixed": "#ffdea5", "outline-variant": "#c5c6cd", "gold-deep": "#C59B27", "inverse-primary": "#b9c7e4", "secondary-container": "#a8c8ff", "surface-container-lowest": "#ffffff", "on-surface": "#191c1e", "secondary": "#3f5f90", "inverse-on-surface": "#eff1f3", "on-secondary-fixed": "#001b3c", "surface-base": "#F8FBFF", "card-surface": "#FFFFFF", "error-container": "#ffdad6", "on-tertiary-container": "#ab7c00", "surface-subtle": "#F0F4F8", "primary-fixed-dim": "#b9c7e4", "on-secondary-container": "#335383", "on-error-container": "#93000a", "surface": "#f8f9fc", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#ffbb06", "tertiary-container": "#271900", "surface-dim": "#d8dadd", "secondary-fixed-dim": "#a8c8ff", "tertiary": "#000000", "on-primary-container": "#76849f", "on-primary": "#ffffff", "primary-fixed": "#d6e3ff", "surface-bright": "#f8f9fc", "surface-container": "#eceef0", "on-surface-variant": "#44474d", "outline": "#75777e", "primary-container": "#0d1c32", "surface-container-highest": "#e1e2e5", "on-primary-fixed-variant": "#39475f", "on-primary-fixed": "#0d1c32", "background": "#f8f9fc", "surface-container-high": "#e7e8eb", "text-muted": "#64748B", "on-secondary-fixed-variant": "#264776", "border-subtle": "#E2E8F0", "surface-variant": "#e1e2e5", "surface-container-low": "#f2f4f6", "surface-tint": "#515f78", "secondary-fixed": "#d6e3ff", "inverse-surface": "#2e3133", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#5d4200", "on-tertiary-fixed": "#271900" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1.25rem" }, "fontFamily": { "headline-lg": [ "Poppins", "sans-serif" ], "display-lg-mobile": [ "Poppins", "sans-serif" ], "label-lg": [ "Inter", "sans-serif" ], "body-sm": [ "Inter", "sans-serif" ], "headline-sm": [ "Poppins", "sans-serif" ], "headline-md": [ "Poppins", "sans-serif" ], "body-lg": [ "Inter", "sans-serif" ], "body-md": [ "Inter", "sans-serif" ], "display-lg": [ "Poppins", "sans-serif" ], "label-md": [ "Inter", "sans-serif" ], "label-sm": [ "Inter", "sans-serif" ] }, "fontSize": { "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "30px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface-base font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full border-2 border-gold-deep flex items-center justify-center bg-primary-container shadow-[0_0_12px_rgba(197,155,39,0.2)]"><span class="material-symbols-outlined text-gold-deep text-[20px]">arrow_upward_alt</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight font-semibold">FundenFlo</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-gold-deep font-semibold">PARTNER NETWORK</span></div></div></div><div class="px-space-lg py-space-sm"><div class="bg-primary-container px-space-md py-space-sm rounded-xl flex items-center justify-between border border-outline/20"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wide">Referral Code</span><span class="font-label-md text-label-md text-on-primary font-semibold tracking-wider">FF-DSA-20418</span></div><button class="text-gold-deep hover:text-tertiary-fixed transition-colors p-space-xs" type="button"><span class="material-symbols-outlined text-[18px]">content_copy</span></button></div></div><div class="px-space-md pt-space-md"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-on-primary/5 text-on-primary font-semibold border-l-4 border-gold-deep pl-space-md"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-on-primary/5 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-on-primary/5 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="my-leads" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>My Leads</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-on-primary/5 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="file-application" href="#"><span class="material-symbols-outlined text-[20px]">post_add</span><span>File Application</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-on-primary/5 text-on-primary font-semibold border-l-4 border-gold-deep pl-space-md" data-path="commissions" href="#"><span class="material-symbols-outlined text-gold-deep text-[20px]">payments</span><span>Commissions</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-on-primary/5 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="profile-kyc" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span>Profile &amp; KYC</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-on-primary/5 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="help" href="#"><span class="material-symbols-outlined text-[20px]">help</span><span>Help</span></a></nav></div></div><div class="p-space-lg"><div class="bg-on-primary/5 p-space-md rounded-xl border border-outline/10 flex items-center gap-space-md"><div class="w-9 h-9 rounded-lg bg-gold-deep/15 flex items-center justify-center text-gold-deep"><span class="material-symbols-outlined text-[20px]">support_agent</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-primary font-semibold">Concierge Desk</span><span class="font-body-sm text-body-sm text-on-primary-container">Priority CA/DSA Hotline</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 border-b border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-subtle px-space-md py-space-xs rounded-full border border-border-subtle"><span class="font-label-sm text-label-sm text-text-muted">ID:</span><span class="font-label-sm text-label-sm font-semibold text-primary-container">FF-DSA-20418</span></div><div class="flex items-center gap-space-xs bg-status-success/10 px-space-md py-space-xs rounded-full"><span class="w-2 h-2 rounded-full bg-status-success"></span><span class="font-label-sm text-label-sm text-status-success font-semibold tracking-wide">ACTIVE PARTNER</span></div></div><div class="flex items-center gap-space-lg"><button class="relative p-space-xs text-text-muted hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-gold-deep"></span></button><div class="h-8 w-px bg-border-subtle"></div><div class="flex items-center gap-space-md"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Rajesh Sharma, FCA</span><span class="font-body-sm text-body-sm text-text-muted">Apex Advisory Partners</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface-base"><div class="flex flex-col w-full">
+<div class="px-space-xl py-space-lg flex flex-col gap-space-lg max-w-[1360px] mx-auto w-full">
+<!-- Top Header Area -->
+<div class="flex flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-[#0A192F] font-semibold tracking-tight">Commissions</h1>
+<p class="font-body-md text-body-md text-text-muted">Real-time earnings, payout schedules, and statutory withholding ledger</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-2 bg-surface-container-lowest border border-[#CBD5E1] text-[#0A192F] px-[18px] py-[10px] rounded-lg font-label-md text-label-md hover:bg-surface-subtle transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-[#0A192F]">download</span>
+<span>Download statement</span>
+</button>
+</div>
+</div>
+<!-- Row of 4 Summary Cards -->
+<div class="grid grid-cols-4 gap-5">
+<!-- Card 1: Total Earned -->
+<div class="bg-card-surface rounded-[14px] p-5 border border-border-subtle shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold text-text-muted">TOTAL EARNED</span>
+<span class="w-2 h-2 rounded-full bg-[#0A192F]"></span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">₹1,12,000</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-3">Gross accrued commissions</p>
+</div>
+<!-- Card 2: Pending Disbursal -->
+<div class="bg-card-surface rounded-[14px] p-5 border border-border-subtle shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-[3px] bg-[#D97706]"></div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold text-amber-700">PENDING DISBURSAL</span>
+<span class="w-2 h-2 rounded-full bg-[#D97706]"></span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-amber-600 tracking-tight">₹38,400</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-3">Awaiting lender settlement</p>
+</div>
+<!-- Card 3: Paid to Account -->
+<div class="bg-card-surface rounded-[14px] p-5 border border-border-subtle shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-[3px] bg-[#1F7A43]"></div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold text-status-success">PAID TO ACCOUNT</span>
+<span class="w-2 h-2 rounded-full bg-[#1F7A43]"></span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-status-success tracking-tight">₹73,600</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-3">Credited via direct bank RTGS</p>
+</div>
+<!-- Card 4: Reversed / Clawback -->
+<div class="bg-card-surface rounded-[14px] p-5 border border-border-subtle shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold text-text-muted">REVERSED / CLAWBACK</span>
+<span class="w-2 h-2 rounded-full bg-slate-400"></span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-slate-700 tracking-tight">₹0</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-3">Zero disputed or canceled files</p>
+</div>
+</div>
+<!-- Main Card: Commission Ledger -->
+<div class="bg-card-surface rounded-2xl border border-border-subtle p-6 shadow-sm flex flex-col gap-space-md">
+<!-- Card Header: Title + Filter Chips -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-sm text-headline-sm text-slate-900 font-semibold tracking-tight">Commission ledger</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-subtle border border-border-subtle font-label-sm text-label-sm text-text-muted font-medium" id="transaction-count">6 transactions</span>
+</div>
+<div class="flex items-center gap-2" role="tablist">
+<button class="filter-btn px-3 py-1 rounded-[20px] font-label-sm text-label-sm bg-[#0A192F] text-surface-container-lowest font-semibold transition-all" data-filter="all" type="button">All</button>
+<button class="filter-btn px-3 py-1 rounded-[20px] font-label-sm text-label-sm bg-[#FEF3C7] text-amber-800 font-medium hover:bg-amber-200 transition-all" data-filter="Pending" type="button">Pending</button>
+<button class="filter-btn px-3 py-1 rounded-[20px] font-label-sm text-label-sm bg-[#DCFCE7] text-emerald-800 font-medium hover:bg-emerald-200 transition-all" data-filter="Paid" type="button">Paid</button>
+<button class="filter-btn px-3 py-1 rounded-[20px] font-label-sm text-label-sm bg-[#F1F5F9] text-slate-700 font-medium hover:bg-slate-200 transition-all" data-filter="Reversed" type="button">Reversed</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="ledger-table">
+<thead>
+<tr class="border-b border-border-subtle">
+<th class="pb-3 text-left font-label-sm text-label-sm tracking-wider uppercase text-text-muted font-semibold" scope="col">Application ID</th>
+<th class="pb-3 text-left font-label-sm text-label-sm tracking-wider uppercase text-text-muted font-semibold" scope="col">Borrower</th>
+<th class="pb-3 text-left font-label-sm text-label-sm tracking-wider uppercase text-text-muted font-semibold" scope="col">Lender</th>
+<th class="pb-3 text-left font-label-sm text-label-sm tracking-wider uppercase text-text-muted font-semibold" scope="col">Disbursed amount</th>
+<th class="pb-3 text-left font-label-sm text-label-sm tracking-wider uppercase text-text-muted font-semibold" scope="col">Commission basis</th>
+<th class="pb-3 text-left font-label-sm text-label-sm tracking-wider uppercase text-text-muted font-semibold" scope="col">State</th>
+<th class="pb-3 text-left font-label-sm text-label-sm tracking-wider uppercase text-text-muted font-semibold" scope="col">Expected payout date</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="ledger-row hover:bg-surface-subtle/60 transition-colors" data-state="Pending">
+<td class="py-4">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-slate-800">
+<span>FF-24-08901</span>
+<button class="text-text-muted hover:text-[#0A192F] p-0.5 rounded transition-colors" onclick="navigator.clipboard.writeText('FF-24-08901')" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-slate-900">Sharma Autocraft Pvt Ltd</span>
+<span class="font-body-sm text-body-sm text-text-muted">MSME</span>
+</div>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">Lender A</td>
+<td class="py-4 font-label-md text-label-md font-medium text-slate-900">₹25,00,000</td>
+<td class="py-4 font-body-md text-body-md text-slate-600">0.5% of disbursal</td>
+<td class="py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Pending
+                </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">15 Oct 2026</td>
+</tr>
+<!-- Row 2 -->
+<tr class="ledger-row hover:bg-surface-subtle/60 transition-colors" data-state="Paid">
+<td class="py-4">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-slate-800">
+<span>FF-24-08842</span>
+<button class="text-text-muted hover:text-[#0A192F] p-0.5 rounded transition-colors" onclick="navigator.clipboard.writeText('FF-24-08842')" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-slate-900">Kalyan Diagnostics</span>
+<span class="font-body-sm text-body-sm text-text-muted">Healthcare</span>
+</div>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">Lender B</td>
+<td class="py-4 font-label-md text-label-md font-medium text-slate-900">₹40,00,000</td>
+<td class="py-4 font-body-md text-body-md text-slate-600">0.6% of disbursal</td>
+<td class="py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-status-success border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Paid
+                </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">28 Sep 2026 (Paid)</td>
+</tr>
+<!-- Row 3 -->
+<tr class="ledger-row hover:bg-surface-subtle/60 transition-colors" data-state="Paid">
+<td class="py-4">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-slate-800">
+<span>FF-24-08795</span>
+<button class="text-text-muted hover:text-[#0A192F] p-0.5 rounded transition-colors" onclick="navigator.clipboard.writeText('FF-24-08795')" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-slate-900">Verma Logistics &amp; Fleet</span>
+<span class="font-body-sm text-body-sm text-text-muted">Transport</span>
+</div>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">Lender C</td>
+<td class="py-4 font-label-md text-label-md font-medium text-slate-900">₹35,00,000</td>
+<td class="py-4 font-body-md text-body-md text-slate-600">0.5% of disbursal</td>
+<td class="py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-status-success border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Paid
+                </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">15 Sep 2026 (Paid)</td>
+</tr>
+<!-- Row 4 -->
+<tr class="ledger-row hover:bg-surface-subtle/60 transition-colors" data-state="Pending">
+<td class="py-4">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-slate-800">
+<span>FF-24-08914</span>
+<button class="text-text-muted hover:text-[#0A192F] p-0.5 rounded transition-colors" onclick="navigator.clipboard.writeText('FF-24-08914')" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-slate-900">Mehta Textile Trading</span>
+<span class="font-body-sm text-body-sm text-text-muted">Wholesale</span>
+</div>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">Lender D</td>
+<td class="py-4 font-label-md text-label-md font-medium text-slate-900">₹20,00,000</td>
+<td class="py-4 font-body-md text-body-md text-slate-600">0.4% of disbursal</td>
+<td class="py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Pending
+                </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">22 Oct 2026</td>
+</tr>
+<!-- Row 5 -->
+<tr class="ledger-row hover:bg-surface-subtle/60 transition-colors" data-state="Paid">
+<td class="py-4">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-slate-800">
+<span>FF-24-08710</span>
+<button class="text-text-muted hover:text-[#0A192F] p-0.5 rounded transition-colors" onclick="navigator.clipboard.writeText('FF-24-08710')" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-slate-900">Ananya Enterprises</span>
+<span class="font-body-sm text-body-sm text-text-muted">Retail</span>
+</div>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">Lender E</td>
+<td class="py-4 font-label-md text-label-md font-medium text-slate-900">₹28,00,000</td>
+<td class="py-4 font-body-md text-body-md text-slate-600">0.5% of disbursal</td>
+<td class="py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-status-success border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Paid
+                </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">30 Aug 2026 (Paid)</td>
+</tr>
+<!-- Row 6 -->
+<tr class="ledger-row hover:bg-surface-subtle/60 transition-colors" data-state="Reversed">
+<td class="py-4">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-slate-800">
+<span>FF-24-08655</span>
+<button class="text-text-muted hover:text-[#0A192F] p-0.5 rounded transition-colors" onclick="navigator.clipboard.writeText('FF-24-08655')" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-slate-900">Apex Agro Tech</span>
+<span class="font-body-sm text-body-sm text-text-muted">Agriculture</span>
+</div>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-700">Lender F</td>
+<td class="py-4 font-label-md text-label-md font-medium text-slate-500">₹0 <span class="font-body-sm text-body-sm text-text-muted font-normal">(Ineligible / Lapsed)</span></td>
+<td class="py-4 font-body-md text-body-md text-slate-600">0.5% of disbursal</td>
+<td class="py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                  Reversed
+                </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-slate-400">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Note Container -->
+<div class="bg-[#F8FAFC] border border-border-subtle rounded-lg p-3.5 flex items-center gap-2.5 font-body-sm text-body-sm text-slate-600">
+<span class="material-symbols-outlined text-[18px] text-secondary flex-shrink-0">info</span>
+<span>Payouts are released only after FundenFlo receives confirmed payment from the lender, as per your partner agreement.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const tableRows = document.querySelectorAll('.ledger-row');
+    const countBadge = document.getElementById('transaction-count');
+
+    const styleStates = {
+      all: {
+        active: ['bg-[#0A192F]', 'text-surface-container-lowest', 'font-semibold'],
+        inactive: ['bg-surface-subtle', 'text-slate-600', 'font-medium', 'hover:bg-slate-200']
+      },
+      Pending: {
+        active: ['bg-amber-500', 'text-surface-container-lowest', 'font-semibold'],
+        inactive: ['bg-[#FEF3C7]', 'text-amber-800', 'font-medium', 'hover:bg-amber-200']
+      },
+      Paid: {
+        active: ['bg-status-success', 'text-surface-container-lowest', 'font-semibold'],
+        inactive: ['bg-[#DCFCE7]', 'text-emerald-800', 'font-medium', 'hover:bg-emerald-200']
+      },
+      Reversed: {
+        active: ['bg-slate-600', 'text-surface-container-lowest', 'font-semibold'],
+        inactive: ['bg-[#F1F5F9]', 'text-slate-700', 'font-medium', 'hover:bg-slate-200']
+      }
+    };
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        // Reset all buttons to inactive styling
+        filterButtons.forEach(btn => {
+          const btnFilter = btn.getAttribute('data-filter');
+          const states = styleStates[btnFilter];
+          if (states) {
+            btn.classList.remove(...states.active);
+            btn.classList.add(...states.inactive);
+          }
+        });
+
+        // Set current button to active styling
+        const activeStates = styleStates[filter];
+        if (activeStates) {
+          button.classList.remove(...activeStates.inactive);
+          button.classList.add(...activeStates.active);
+        }
+
+        // Filter Rows
+        let visibleCount = 0;
+        tableRows.forEach(row => {
+          const rowState = row.getAttribute('data-state');
+          if (filter === 'all' || rowState === filter) {
+            row.style.display = '';
+            visibleCount++;
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        if (countBadge) {
+          countBadge.textContent = `${visibleCount} transaction${visibleCount === 1 ? '' : 's'}`;
+        }
+      });
+    });
+  });
+</script></main></div></body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><title>Improvement Plan</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-low": "#f2f4f6", "on-primary": "#ffffff", "surface-container": "#eceef0", "primary": "#000000", "text-muted": "#64748B", "surface-container-high": "#e7e8eb", "on-error": "#ffffff", "surface-subtle": "#F0F4F8", "tertiary-container": "#271900", "outline": "#75777e", "on-primary-fixed": "#0d1c32", "card-surface": "#FFFFFF", "surface-variant": "#e1e2e5", "secondary": "#3f5f90", "on-tertiary": "#ffffff", "on-surface-variant": "#44474d", "surface-base": "#F8FBFF", "tertiary": "#000000", "primary-fixed": "#d6e3ff", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#b9c7e4", "tertiary-fixed": "#ffdea5", "inverse-on-surface": "#eff1f3", "tertiary-fixed-dim": "#ffbb06", "status-success": "#1F7A43", "on-primary-fixed-variant": "#39475f", "outline-variant": "#c5c6cd", "inverse-primary": "#b9c7e4", "surface-container-highest": "#e1e2e5", "on-secondary-fixed-variant": "#264776", "surface": "#f8f9fc", "background": "#f8f9fc", "on-tertiary-fixed": "#271900", "gold-deep": "#C59B27", "surface-dim": "#d8dadd", "border-subtle": "#E2E8F0", "inverse-surface": "#2e3133", "on-background": "#191c1e", "on-surface": "#191c1e", "on-primary-container": "#76849f", "secondary-container": "#a8c8ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "surface-bright": "#f8f9fc", "secondary-fixed-dim": "#a8c8ff", "on-tertiary-container": "#ab7c00", "error": "#ba1a1a", "surface-tint": "#515f78", "on-error-container": "#93000a", "on-secondary-container": "#335383", "secondary-fixed": "#d6e3ff", "on-secondary-fixed": "#001b3c", "on-tertiary-fixed-variant": "#5d4200", "primary-container": "#0d1c32" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1.25rem", "space-xs": "0.25rem", "space-md": "1rem" }, fontFamily: { "display-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "body-sm": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Space Grotesk"], "label-md": ["Inter"], "headline-md": ["Space Grotesk"], "label-sm": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Space Grotesk"] }, fontSize: { "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-card-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-card-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><button aria-label="Go back" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface hover:text-secondary active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface text-center truncate flex-1 px-space-sm">Improvement Plan</h1><div class="flex items-center justify-end w-11 h-11"></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-card-surface flex-1 px-margin"><div class="flex flex-col w-full pb-6">
+<!-- Title Block -->
+<div class="mt-4 mb-6">
+<h2 class="font-headline-md text-headline-md text-[#0A192F] tracking-tight leading-snug">
+      One thing can widen your options
+    </h2>
+<p class="font-body-md text-body-md text-text-muted mt-1.5 leading-relaxed">
+      You can still apply with your matched lenders now.
+    </p>
+</div>
+<!-- Focused Recommendation Card -->
+<div class="bg-card-surface rounded-[16px] border border-border-subtle shadow-[0_4px_20px_-2px_rgba(10,25,47,0.04)] overflow-hidden flex relative mb-5">
+<!-- Left Accent Bar -->
+<div class="w-1 bg-[#D97706] shrink-0 self-stretch"></div>
+<!-- Card Content -->
+<div class="flex-1 py-5 px-space-md flex flex-col">
+<!-- Card Header -->
+<div class="flex items-center gap-2.5 pb-4">
+<span class="material-symbols-outlined text-[#D97706] text-[20px] select-none" style="font-variation-settings: 'FILL' 1;">
+          error
+        </span>
+<h3 class="font-headline-sm text-[17px] font-semibold text-[#0A192F] leading-tight">
+          Existing EMIs are high
+        </h3>
+</div>
+<!-- Section 1: What we found -->
+<div class="pt-3.5 pb-3 border-t border-[#F1F5F9]">
+<p class="font-label-sm text-[11px] uppercase tracking-wider text-text-muted font-semibold mb-1">
+          What we found
+        </p>
+<p class="font-body-md text-body-md text-[#1E293B] font-medium leading-relaxed">
+          EMIs take about 48% of your monthly inflow.
+        </p>
+</div>
+<!-- Section 2: Why it matters -->
+<div class="pt-3 pb-3 border-t border-[#F1F5F9]">
+<p class="font-label-sm text-[11px] uppercase tracking-wider text-text-muted font-semibold mb-1">
+          Why it matters
+        </p>
+<p class="font-body-md text-body-md text-[#1E293B] font-medium leading-relaxed">
+          Many lenders prefer this below 40%.
+        </p>
+</div>
+<!-- Section 3: What you can do -->
+<div class="pt-3 pb-3 border-t border-[#F1F5F9]">
+<p class="font-label-sm text-[11px] uppercase tracking-wider text-text-muted font-semibold mb-1">
+          What you can do
+        </p>
+<p class="font-body-md text-body-md text-[#1E293B] font-medium leading-relaxed">
+          Close or consolidate one small loan, or add a co-applicant.
+        </p>
+</div>
+<!-- Section 4: Evidence needed -->
+<div class="pt-3 border-t border-[#F1F5F9]">
+<p class="font-label-sm text-[11px] uppercase tracking-wider text-text-muted font-semibold mb-1">
+          Evidence needed
+        </p>
+<p class="font-body-md text-body-md text-[#1E293B] font-medium leading-relaxed">
+          Latest loan statement or closure letter.
+        </p>
+</div>
+</div>
+</div>
+<!-- Info Notice Row -->
+<div class="bg-[#F8FBFF] border border-[#E0EDFB] rounded-[12px] p-3.5 flex items-start gap-3 mb-8">
+<span class="material-symbols-outlined text-[#64748B] text-[20px] shrink-0 mt-0.5 select-none">
+      sync
+    </span>
+<p class="font-body-sm text-[13px] font-medium text-[#475569] leading-snug">
+      We will reassess your score when you upload a new bank statement.
+    </p>
+</div>
+<!-- Bottom Actions -->
+<div class="w-full flex flex-col items-center mt-auto">
+<button class="w-full h-[52px] bg-[#0A192F] active:bg-[#012C5A] text-on-primary rounded-[12px] font-label-lg text-[15px] font-semibold flex items-center justify-center transition-colors shadow-sm select-none" type="button">
+      Continue with matched lenders
+    </button>
+<button class="mt-4 font-body-md text-[14px] font-medium text-[#C59B27] active:opacity-75 transition-opacity select-none" type="button">
+      Upload new statement
+    </button>
+</div>
+</div></main>
+
+</body></html>

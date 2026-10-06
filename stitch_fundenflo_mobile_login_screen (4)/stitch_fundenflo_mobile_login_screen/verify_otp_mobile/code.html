@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify OTP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0A192F',
+            brandNavy: '#012C5A',
+            logoGold: '#FDB901',
+            deepGold: '#C59B27',
+            surface: '#FFFFFF',
+            canvasBg: '#F8FBFF',
+            textMain: '#191C1E',
+            mutedText: '#64748B',
+            borderColor: '#E2E8F0',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFFFFF;
+      color: #191C1E;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .font-heading {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen text-[#191C1E] flex flex-col justify-between mx-auto relative px-6 pt-6 pb-8 w-full">
+<!-- Top Navigation & Content -->
+<div>
+<!-- Top Bar with Back Arrow -->
+<div class="flex items-center mb-8">
+<button aria-label="Go back" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-[#191C1E] hover:bg-slate-100 transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Title & Subtitle -->
+<div class="mb-8">
+<h1 class="text-2xl font-semibold text-[#191C1E] tracking-tight mb-2">Enter the 6-digit code</h1>
+<p class="text-sm text-[#64748B] flex items-center gap-1.5 font-normal">
+<span>Sent to +91 98765 43210</span>
+<span>·</span>
+<button class="text-[#0A192F] font-medium underline underline-offset-2 hover:text-[#012C5A]">Edit</button>
+</p>
+</div>
+<!-- 6-digit OTP Inputs -->
+<div class="flex justify-between items-center gap-2 mb-6">
+<!-- Digit 1 (filled) -->
+<div class="w-12 h-14 rounded-xl border border-[#E2E8F0] bg-[#F8FBFF] flex items-center justify-center text-xl font-semibold text-[#0A192F] shadow-sm">
+        5
+      </div>
+<!-- Digit 2 (filled) -->
+<div class="w-12 h-14 rounded-xl border border-[#E2E8F0] bg-[#F8FBFF] flex items-center justify-center text-xl font-semibold text-[#0A192F] shadow-sm">
+        2
+      </div>
+<!-- Digit 3 (filled) -->
+<div class="w-12 h-14 rounded-xl border border-[#E2E8F0] bg-[#F8FBFF] flex items-center justify-center text-xl font-semibold text-[#0A192F] shadow-sm">
+        8
+      </div>
+<!-- Digit 4 (filled) -->
+<div class="w-12 h-14 rounded-xl border border-[#E2E8F0] bg-[#F8FBFF] flex items-center justify-center text-xl font-semibold text-[#0A192F] shadow-sm">
+        4
+      </div>
+<!-- Digit 5 (active with navy border & subtle blink cursor) -->
+<div class="w-12 h-14 rounded-xl border-2 border-[#0A192F] bg-white flex items-center justify-center text-xl font-semibold text-[#0A192F] shadow-sm relative">
+<span class="inline-block w-0.5 h-6 bg-[#0A192F] animate-pulse"></span>
+</div>
+<!-- Digit 6 (empty) -->
+<div class="w-12 h-14 rounded-xl border border-[#E2E8F0] bg-white flex items-center justify-center text-xl font-semibold text-[#64748B] shadow-sm">
+</div>
+</div>
+<!-- Resend timer -->
+<div class="text-left">
+<span class="text-sm text-[#64748B]">Resend code in 0:24</span>
+</div>
+</div>
+<!-- Bottom CTA & Terms -->
+<div class="w-full mt-auto pt-8">
+<button class="w-full py-4 bg-[#0A192F] hover:bg-[#0D2040] text-white text-base font-semibold rounded-[12px] transition-colors shadow-sm flex items-center justify-center mb-3">
+      Verify &amp; continue
+    </button>
+<p class="text-xs text-center text-[#64748B] leading-relaxed px-4">
+      By continuing you agree to the <a class="underline hover:text-[#191C1E]" href="#">Terms</a> and <a class="underline hover:text-[#191C1E]" href="#">Privacy Policy</a>
+</p>
+</div>
+</body>
+</html>
